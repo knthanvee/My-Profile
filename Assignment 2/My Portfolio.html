@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+        color: #333;
+    }
+
+    /* Navigation */
+    nav {
+        background: #222;
+        padding: 18px;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 20px;
+        font-size: 17px;
+        padding-bottom: 4px;
+        border-bottom: 2px solid transparent;
+    }
+
+    nav a:hover,
+    nav a.active {
+        color: #ffb347;
+        border-bottom: 2px solid #ffb347;
+    }
+
+    /* Home */
+    .home {
+        min-height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: linear-gradient(135deg, #4c1d95, #c026d3);
+        color: white;
+        padding: 30px;
+    }
+
+    .home h1 {
+        font-size: 46px;
+        margin-bottom: 15px;
+    }
+
+    .home span.name {
+        color: #ffb347;
+    }
+
+    .home p {
+        font-size: 20px;
+        margin-bottom: 30px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .home-buttons .btn {
+        display: inline-block;
+        padding: 12px 25px;
+        text-decoration: none;
+        border-radius: 25px;
+        font-weight: bold;
+        margin: 0 8px;
+    }
+
+    .btn-fill {
+        background: #ffb347;
+        color: #222;
+    }
+
+    .btn-fill:hover {
+        background: #222;
+        color: white;
+    }
+
+    .btn-outline {
+        background: transparent;
+        color: white;
+        border: 2px solid white;
+    }
+
+    .btn-outline:hover {
+        background: white;
+        color: #1565c0;
+    }
+
+    /* Sections */
+    section {
+        padding: 60px 10%;
+        text-align: center;
+    }
+
+    section h2 {
+        font-size: 35px;
+        margin-bottom: 10px;
+        color: #6b21a8;
+    }
+
+    .underline {
+        width: 60px;
+        height: 4px;
+        background: #ffb347;
+        margin: 0 auto 30px;
+        border-radius: 2px;
+    }
+
+    .about p {
+        max-width: 700px;
+        margin: auto;
+        line-height: 1.8;
+        font-size: 18px;
+    }
+
+    /* Skills */
+    .skills-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .skill {
+        background: white;
+        padding: 25px;
+        width: 190px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        transition: 0.3s;
+    }
+
+    .skill:hover {
+        transform: translateY(-5px);
+    }
+
+    .skill .icon {
+        font-size: 34px;
+        margin-bottom: 10px;
+    }
+
+    .skill h3 {
+        margin-bottom: 4px;
+    }
+
+    .skill .level {
+        color: #ffb347;
+        font-size: 14px;
+        margin-bottom: 12px;
+        font-weight: bold;
+    }
+
+    .bar {
+        background: #e0e0e0;
+        border-radius: 5px;
+        height: 8px;
+        overflow: hidden;
+    }
+
+    .bar-fill {
+        height: 100%;
+        background: #1565c0;
+        border-radius: 5px;
+    }
+
+    /* Projects */
+    .projects-container {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .project {
+        background: white;
+        width: 280px;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .project h3 {
+        margin-bottom: 15px;
+        color: #6b21a8;
+    }
+
+    .project p {
+        line-height: 1.6;
+    }
+
+    /* Contact */
+    .contact p {
+        margin: 10px;
+        font-size: 18px;
+    }
+
+    /* Footer */
+    footer {
+        background: #222;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+
+    @media (max-width: 600px) {
+        .home h1 {
+            font-size: 32px;
+        }
+        nav a {
+            margin: 0 8px;
+            font-size: 14px;
+        }
+    }
+    </style>
+</head>
+<body>
+     <!-- Navigation -->
+    <nav>
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <!-- Home -->
+    <section class="home" id="home">
+        <div>
+            <h1 id="greeting">Hello, I'm <span class="name">KN Thanvee</span> 👋</h1>
+            <p>I'm a Computer Science student learning to build clean, functional websites with HTML, CSS and JavaScript.</p>
+            <div class="home-buttons">
+                <a href="#projects" class="btn btn-fill">View My Work</a>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <h2>About Me</h2>
+        <div class="underline"></div>
+        <p>
+            I am a CSE student intrested in web development and programming. I enjoy building projects that
+            solve real world problems. I like creating simple and creative websites and exploring new technologies.
+            I am a quick learner who enjoys solving problems and improving my technical skills.
+               
+        </p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="underline"></div>
+
+        <div class="skills-container">
+            <div class="skill">
+                <div class="icon">🌐</div>
+                <h3>HTML</h3>
+                <p class="level">Beginner</p>
+                <div class="bar"><div class="bar-fill" style="width: 40%;"></div></div>
+            </div>
+
+            <div class="skill">
+                <div class="icon">🎨</div>
+                <h3>CSS</h3>
+                <p class="level">Beginner</p>
+                <div class="bar"><div class="bar-fill" style="width: 35%;"></div></div>
+            </div>
+
+            <div class="skill">
+                <div class="icon">⚡</div>
+                <h3>JavaScript</h3>
+                <p class="level">Beginner</p>
+                <div class="bar"><div class="bar-fill" style="width: 30%;"></div></div>
+            </div>
+
+            <div class="skill">
+                <div class="icon">🐍</div>
+                <h3>Python</h3>
+                <p class="level">Intermediate</p>
+                <div class="bar"><div class="bar-fill" style="width: 40%;"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="underline"></div>
+
+        <div class="projects-container">
+            <div class="project">
+                <h3>Portfolio Website</h3>
+                <p>
+                    A personal portfolio website created using
+                    HTML, CSS and JavaScript.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>Automatic Road Accident Detection and GPS Alert System</h3>
+                <p>
+                    An automatic system that uses sensors to detect road
+                    accidents and instantly sends the location via GPS to
+                    emergency contacts, helping save lives during the
+                    critical "Golden Hour."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <div class="underline"></div>
+
+        <p><b>Name:</b> KN Thanvee</p>
+        <p><b>Course:</b> B.Tech in Computer Science</p>
+        <p><b>Email:</b> knthanvee@gmail.com</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 KN Thanvee | My Portfolio</p>
+    </footer>
+
+    <script>
+        // Time-based greeting
+        const hour = new Date().getHours();
+        let greetingText = "Hello";
+        if (hour < 12) {
+            greetingText = "Good Morning";
+        } else if (hour < 17) {
+            greetingText = "Good Afternoon";
+        } else {
+            greetingText = "Good Evening";
+        }
+        document.getElementById("greeting").innerHTML =
+            greetingText + ", I'm <span class='name'>KN Thanvee</span> 👋";
+
+        // Highlight active nav link while scrolling
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        window.addEventListener("scroll", function () {
+            let current = "";
+            sections.forEach(function (section) {
+                const sectionTop = section.offsetTop - 80;
+                if (window.scrollY >= sectionTop) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navLinks.forEach(function (link) {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === "#" + current) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
