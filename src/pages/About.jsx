@@ -4,10 +4,10 @@ import GitHubStats from '../components/GitHubStats/GitHubStats';
 import SkillCard from '../components/SkillCard/SkillCard';
 
 const SKILLS = [
-  { name: 'HTML5', level: 'Advanced', icon: '🌐' },
-  { name: 'CSS3', level: 'Advanced', icon: '🎨' },
-  { name: 'JavaScript', level: 'Advanced', icon: '⚡' },
-  { name: 'React', level: 'Intermediate', icon: '⚛️' }
+  { name: 'HTML5', level: 'Intermediate', icon: '🌐' },
+  { name: 'CSS3', level: 'Intermediate', icon: '🎨' },
+  { name: 'JavaScript', level: 'Intermediate', icon: '⚡' },
+  { name: 'React', level: 'Beginner', icon: '⚛️' }
 ];
 
 function About() {
@@ -24,7 +24,7 @@ function About() {
 
       <section style={{ marginTop: '40px' }}>
         <h2>GitHub Activity</h2>
-        <GitHubStats username='rakeshdotkr' />
+        <GitHubStats username='knthanvee'/>
       </section>
     </div>
   );
