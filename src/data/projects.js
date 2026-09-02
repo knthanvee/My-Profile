@@ -27,5 +27,16 @@ export const projectsData = [
   liveUrl: '#',
   githubUrl: '#'
 },
-  
+{
+  id: 3,
+  title: 'Habit Tracker',
+  description: 'Daily habit tracking app',
+  longDesc:
+    'A simple yet effective habit tracker app that helps users build and maintain positive routines through daily check-ins and progress visualization.',
+  tech: ['MongDB', 'Express', 'React', 'Node.js'],
+  category: 'web',
+  featured: false,
+  liveUrl: '#',
+  githubUrl: '#'
+}
 ];
